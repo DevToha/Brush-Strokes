@@ -1,66 +1,68 @@
 
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import auth from "../../Firebase/Firebase.config";
 
 
 const Register = () => {
-    // const location = useLocation();
+    const location = useLocation();
 
     useEffect(() => {
         document.title = "Register Page";
     }, [location.pathname]);
 
     const [showPassword, setShowPassword] = useState(false)
-    // const [catchError, setCatchError] = useState('')
-    // const [success, setSuccess] = useState('')
-    // const handleRegister = (e) => {
-    //     e.preventDefault()
-    //     const email = e.target.email.value
-    //     const password = e.target.password.value
-    //     console.log(email, password)
+    const [catchError, setCatchError] = useState('')
+    const [success, setSuccess] = useState('')
+    const handleRegister = (e) => {
+        e.preventDefault()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log(email, password)
 
-    //     // password setting
-    //     if (password.length < 6) {
-    //         setCatchError('Password should be at least 6 characters or longer')
-    //         return
-    //     }
+        // password setting
+        if (password.length < 6) {
+            setCatchError('Password should be at least 6 characters or longer')
+            return
+        }
 
-    //     if (!/[A-Z]/.test(password)) {
-    //         setCatchError('Your password should have at least one uppercase character.');
-    //         return;
-    //     }
-    //     else if (!/[a-z]/.test(password)) {
-    //         setCatchError('Your password should have at least one lowercase character.');
-    //         return;
-    //     }
+        if (!/[A-Z]/.test(password)) {
+            setCatchError('Your password should have at least one uppercase character.');
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            setCatchError('Your password should have at least one lowercase character.');
+            return;
+        }
 
 
 
-    //     // reset error
-    //     setCatchError('')
-    //     // reset success
-    //     setSuccess('')
+        // reset error
+        setCatchError('')
+        // reset success
+        setSuccess('')
 
-    //     createUserWithEmailAndPassword(auth, email, password)
-    //         .then(result => {
-    //             console.log(result.user)
-    //             setSuccess('Your Account Create Successfully')
-    //         })
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                console.log(result.user)
+                setSuccess('Your Account Create Successfully')
+            })
 
-    //         .catch(error => {
-    //             console.log(error)
-    //             setCatchError(error.message)
-    //         })
-    // }
+            .catch(error => {
+                console.log(error)
+                setCatchError(error.message)
+            })
+    }
 
     return (
         <div className="bg-[#fae8d3] shadow8 py-5 pl-[115px] ml-[450px] m-10 rounded-3xl w-[600px]">
             <div className=" md:w-1/3 mt-10 mb-10">
                 <h3 className="text-3xl mb-8 font-semibold w-[230px] ml-[77px]">Please Register</h3>
                 <form
-                    // onSubmit={handleRegister}
+                    onSubmit={handleRegister}
                 >
                     <input className="mb-4 w-[352px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="Name" name="name" id="" required />
 
@@ -82,13 +84,13 @@ const Register = () => {
                         </span>
                     </div>
                     <div className="w-[352px]">
-                        {/* {
+                        {
                             catchError && <p className="text-base font-medium text-red-500">{catchError}</p>
                         }
 
                         {
                             success && <p className="text-base font-medium text-green-600">{success}</p>
-                        } */}
+                        }
                     </div>
                     <br />
                     <input className="cursor-pointer mb-4 w-[352px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="Register" />
