@@ -1,20 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import './Header.css'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Header = () => {
-    // const { user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
-    // const handleSignOut = () => {
-    //     logOut()
-    //         .then()
-    //         .catch()
-    // }
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const links = <>
         <li><NavLink to="/"><span className="text-lg font-semibold">Home</span></NavLink></li>
         <li><NavLink to="/card"><span className="text-lg font-semibold">All Art & craft Items</span></NavLink></li>
-        <li><NavLink to="/updateProfile"><span className="text-lg font-semibold">Add Craft Item</span></NavLink></li>
-        <li><NavLink to="/userProfile"><span className="text-lg font-semibold">My Art&Craft List</span></NavLink></li>
+        <li><NavLink to="/AddCraft"><span className="text-lg font-semibold">Add Craft Item</span></NavLink></li>
+        <li><NavLink to="/MyArtCraft"><span className="text-lg font-semibold">My Art&Craft List</span></NavLink></li>
         {/* <li><NavLink to="/TopRatedBook">Catalog</NavLink></li> */}
 
     </>
@@ -44,27 +46,25 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* {
+                    {
                         user && <span className="bg-gray-400 lg:inline md:inline hidden cursor-pointer w-[45px] mr-5 rounded-full h-[45px]"><img className="rounded-full" src={user.photoURL} alt="" title={user.displayName} /></span>
                     }
 
                     {
                         user ?
-                            <button onClick={handleSignOut} className="button21">LOG OUT</button>
+                            <button onClick={handleSignOut} className="button40">LOG OUT</button>
                             :
-                            <Link to="/logIn">
-                                <button className="button21">LOGIN</button>
-                            </Link>
-                    } */}
+                            <div className="flex gap-4 ml-[250px] mt-10 lg:mt-0">
+                                <Link to="/login">
+                                    <button className="button40">LOGIN</button>
+                                </Link>
+                                <Link to="/register">
+                                    <button className="button40">REGISTER</button>
+                                </Link>
+                            </div>
+                    }
 
-                    <div className="flex gap-4 ml-[250px] mt-10 lg:mt-0">
-                        <Link to="/login">
-                            <button className="button40">LOGIN</button>
-                        </Link>
-                        <Link to="/register">
-                            <button className="button40">REGISTER</button>
-                        </Link>
-                    </div>
+
                 </div>
             </div>
 

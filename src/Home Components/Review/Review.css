@@ -1,0 +1,50 @@
+
+.card13 {
+    position: relative;
+    width: 430px;
+    height: 500px;
+    color: black;
+    background-color: #fff4e4;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0px 0px 2px #c0b9b2;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .card13 a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #5f03f4;
+  }
+  
+  .card13 h1 {
+    margin-top: 0px;
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .card13 img {
+    transition: transform 0.4s ease-in-out;
+    width: 70px;
+    height: 80px;
+  }
+  
+  .card13-details {
+    padding: 14px;
+  }
+  .card13-details p {
+    font-size: 14px;
+  }
+  
+  .card13:hover .card13-img img {
+    transform: scale(1.1);
+  }
+  
+  .card13:hover a .card13-icon,
+  .card13:focus a .card13-icon {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  

@@ -1,23 +1,25 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import auth from "../../Firebase/Firebase.config";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from 'sweetalert2'
 
 
 const Login = () => {
 
     const location = useLocation()
     console.log(location)
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     useEffect(() => {
         document.title = "Login Page";
     }, [location.pathname]);
 
-    // const { signInUser } = useContext(AuthContext)
+    const { signInUser } = useContext(AuthContext)
     const [catchError, setCatchError] = useState('')
     const [success, setSuccess] = useState('')
 
@@ -29,38 +31,58 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email, password);
 
-        // signInUser(email, password)
-        //     .then(result => {
-        //         console.log(result.user);
-        //         e.target.reset();
-        //         // navigate(location?.state ? location.state : '/');
-        //         // Show success alert
-        //     })
-        //     .catch(error => {
-        //         console.error(error);
-        //         // Show error alert
+        signInUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                e.target.reset();
+                navigate(location?.state ? location.state : '/');
+                // Show success alert
+                Swal.fire({
+                    title: "Good job",
+                    text: "You Successfully Login",
+                    icon: "success"
+                });
+            })
+            .catch(error => {
+                console.error(error);
+                // Show error alert
+                Swal.fire({
+                    title: "Error Found",
+                    text: "Please Clicked The OK Button and Try Again",
+                    icon: "error"
+                });
 
-        //     });
+            });
 
-        // // password setting
+        // password setting
         // if (password.length < 6) {
         //     setCatchError('Password should be at least 6 characters or longer');
         //     return;
         // }
 
-        // // reset error
-        // setCatchError('');
-        // // reset success
-        // setSuccess('');
+        // reset error
+        setCatchError('');
+        // reset success
+        setSuccess('');
 
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result.user)
                 // setSuccess('LOG IN SUCCESSFUL')
+                Swal.fire({
+                    title: "Good job",
+                    text: "You Successfully Login",
+                    icon: "success"
+                });
             })
             .catch(error => {
                 console.log(error)
                 // setCatchError(error.message)
+                Swal.fire({
+                    title: "Error Found",
+                    text: "Please Clicked The OK Button and Try Again",
+                    icon: "error"
+                });
             })
     }
 
@@ -72,14 +94,22 @@ const Login = () => {
             .then(result => {
                 const GoogleUser = result.user;
                 console.log(GoogleUser);
-                Navigate(location?.state ? location.state : '/');
+                navigate(location?.state ? location.state : '/');
                 // Show success alert
-               
+                Swal.fire({
+                    title: "Good job",
+                    text: "You Successfully Login With Google",
+                    icon: "success"
+                });
             })
             .catch(error => {
                 console.error('error', error.message);
                 // Show error alert
-               
+                Swal.fire({
+                    title: "Error Found",
+                    text: "Please Clicked The OK Button and Try Again",
+                    icon: "error"
+                });
             });
     };
     const gitHubProvider = new GithubAuthProvider()
@@ -90,12 +120,23 @@ const Login = () => {
             .then(result => {
                 const gitHubUser = result.user;
                 console.log((gitHubUser));
-                Navigate(location?.state ? location.state : '/');
+                navigate(location?.state ? location.state : '/');
                 // Show success alert
+                Swal.fire({
+                    title: "Good job",
+                    text: "You Successfully Login With GitHUB",
+                    icon: "success"
+                });
+
             })
             .catch(error => {
                 console.error('error', error.message);
                 // Show error alert
+                Swal.fire({
+                    title: "Error Found",
+                    text: "Please Clicked The OK Button and Try Again",
+                    icon: "error"
+                });
             });
     };
 
