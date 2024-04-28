@@ -5,6 +5,7 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import auth from "../../Firebase/Firebase.config";
+import Swal from 'sweetalert2'
 
 
 const Register = () => {
@@ -48,7 +49,12 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result.user)
-                setSuccess('Your Account Create Successfully')
+                // setSuccess('Your Account Create Successfully')
+                Swal.fire({
+                    title: "Your Account Created Successfully",
+                    // text: "Please, Go To Login Page and Login Now",
+                    icon: "success"
+                });
             })
 
             .catch(error => {

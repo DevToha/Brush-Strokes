@@ -14,7 +14,7 @@ const Header = () => {
 
     const links = <>
         <li><NavLink to="/"><span className="text-lg font-semibold">Home</span></NavLink></li>
-        <li><NavLink to="/card"><span className="text-lg font-semibold">All Art & craft Items</span></NavLink></li>
+        <li><NavLink to="/allArtAndCraft"><span className="text-lg font-semibold">All Art & craft Items</span></NavLink></li>
         <li><NavLink to="/AddCraft"><span className="text-lg font-semibold">Add Craft Item</span></NavLink></li>
         <li><NavLink to="/MyArtCraft"><span className="text-lg font-semibold">My Art&Craft List</span></NavLink></li>
         {/* <li><NavLink to="/TopRatedBook">Catalog</NavLink></li> */}

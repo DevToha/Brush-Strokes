@@ -8,7 +8,7 @@ const Footer = () => {
                 <footer className='bg-[#fae8d3] lg:h-[350px] lg:pt-32 pt-20'>
                     <footer className=" footer text-base-content">
                         <nav>
-                            <h6 className="text-4xl font-bold ml-28 mt-[26px]">BRUSH STROKES</h6>
+                            <h6 className="text-4xl font-bold ml-28 mt-[26px] text12">BRUSH STROKES</h6>
                         </nav>
                         <nav className="ml-24">
                             <h6 className="lg:text-4xl text-2xl ml-[85px] font-semibold mb-3 lg:ml-[64px]">Quick Links</h6>
