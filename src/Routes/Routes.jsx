@@ -15,7 +15,7 @@ import ErrorPage from "../Error Page/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     element: <Root></Root>,
     children: [
       {
@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {
         path: '/CraftItems',
         element: <CraftItems></CraftItems>,
-        loader: () => fetch('http://localhost:5000/item')
+        // loader: () => fetch('http://localhost:5000/item')
       },
       {
-        path: '/craftDetails/:_id',
+        path: '/craftDetails/:id',
         element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-        // loader: () => fetch('http://localhost:5000/item')
+        loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`)
       }
 
     ]

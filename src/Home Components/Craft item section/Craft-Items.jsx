@@ -1,15 +1,30 @@
+import { useEffect, useState } from "react";
+import CraftItem from "./Craft-Item";
 
-import { useLoaderData } from "react-router-dom";
 
 
 
 const CraftItems = () => {
 
-    const items = useLoaderData()
-    
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/item')
+            .then(res => res.json())
+            .then(data => setItems(data))
+    }, [])
+
+
     return (
-        <div className="mt-10">
-            <h2 className="text-center font-bold text-4xl lg:mb-10 mb-5">Featured Estate: {items}</h2>
+        <div>
+            <h2 className="text-center font-bold text-4xl lg:mb-10 mb-5">Featured Estate</h2>
+
+            <div className="lg:grid lg:grid-cols-3 lg:ml-[75px]">
+                {
+                    items.map(item => <CraftItem key={item.id} item={item}></CraftItem>)
+                }
+            </div>
+
         </div>
     );
 };
