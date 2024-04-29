@@ -1,16 +1,13 @@
 import './MyCart.css'
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 
-const MySingleArtAndCraft = ({ p }) => {
+const MySingleArtAndCraft = ({ p, setItem, item }) => {
 
     const { _id, itemName, photoURL, price, rating, customization, stockStatus } = p;
 
-
-    const [items, setItems] = useState([]);
 
     const handleDelete = _id => {
         console.log(_id)
@@ -47,8 +44,8 @@ const MySingleArtAndCraft = ({ p }) => {
 
                             ///remaining item
 
-                            const updatedItems = items.filter(item => item._id !== _id);
-                            setItems(updatedItems);
+                            const remaining = item.filter(i => i._id !== _id);
+                            setItem(remaining);
                         }
                     })
 
