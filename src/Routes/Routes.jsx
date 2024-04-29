@@ -52,7 +52,6 @@ const router = createBrowserRouter([
         element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`)
       }
-
     ]
   },
 ]);

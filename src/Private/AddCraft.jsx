@@ -1,7 +1,11 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../Providers/AuthProvider';
 
 
 const AddCraft = () => {
+    const { user } = useContext(AuthContext)
+
 
     const handleAddItem = event => {
         event.preventDefault()
@@ -19,8 +23,9 @@ const AddCraft = () => {
         const customization = form.customization.value
         const userEmail = form.User_Email.value
         const stockStatus = form.stockStatus.value
+        const email = user.email
 
-        const newItem = { itemName, subcategoryName, shortDescription, processingTime, userName, price, rating, photoURL, customization, userEmail, stockStatus }
+        const newItem = { itemName, subcategoryName, shortDescription, processingTime, userName, price, rating, photoURL, customization, userEmail, stockStatus, email }
 
         console.log(newItem)
 
