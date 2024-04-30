@@ -62,25 +62,25 @@ const AddCraft = () => {
 
                     <form onSubmit={handleAddItem}>
                         <div>
-                            <div className="flex gap-16">
+                            <div className="lg:flex md:flex gap-16">
                                 <div>
                                     <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="Item Name" name="item_name" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Subcategory Name" name="subcategory_Name" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Subcategory Name" name="subcategory_Name" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Short Description" name="short_description" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Short Description" name="short_description" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Processing Time" name="processing_time" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Processing Time" name="processing_time" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="User Name" name="User_Name" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="User Name" name="User_Name" id="" required />
 
                                     <br />
 
@@ -90,23 +90,23 @@ const AddCraft = () => {
                                 {/*  */}
 
                                 <div>
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Price" name="price" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Price" name="price" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Rating" name="rating" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Rating" name="rating" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="photoURL" placeholder="Image ( Use Image URL)" name="photoURL" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="photoURL" placeholder="Image ( Use Image URL)" name="photoURL" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Customization" name="customization" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Customization" name="customization" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="email" placeholder="User Email" name="User_Email" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="email" placeholder="User Email" name="User_Email" id="" required />
                                 </div>
                             </div>
 
@@ -116,7 +116,7 @@ const AddCraft = () => {
                                 </div>
 
                                 <br />
-                                <input className="cursor-pointer mt-10 w-[1001px] md:w-[580px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="ADD NOW" />
+                                <input className="cursor-pointer ml-10 lg:ml-0 md:ml-0 mt-10 lg:w-[1001px] md:w-[580px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="ADD NOW" />
                             </div>
 
                         </div>

@@ -7,7 +7,7 @@ const Review = () => {
         <div>
             <h1 className="text-4xl font-semibold mt-8 text-center mb-8">What Our People Saying</h1>
 
-            <div className='flex gap-16 lg:ml-[50px] cursor-pointer'>
+            <div className='lg:flex md:flex gap-16 lg:ml-[50px] cursor-pointer'>
                 <div className="card13 rounded-lg">
                     <div className="card13-img">
                         <div className='bg-[#fae8d3] w-[] h-[160px] pt-10 pl-10'>
@@ -29,7 +29,7 @@ const Review = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card13 rounded-lg">
+                <div className="card13 rounded-lg my-5 lg:my-0 md:my-0">
                     <div className="card13-img">
                         <div className='bg-[#fae8d3] w-[] h-[160px] pt-10 pl-10'>
                             <img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=600" alt="nature-pic-CSSnippets" />

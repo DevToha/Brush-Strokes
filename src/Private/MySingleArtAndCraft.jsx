@@ -81,15 +81,15 @@ const MySingleArtAndCraft = ({ p, setItem, item }) => {
                                     <p className="text-base mt-5 font-medium"><span>Stock Status : <span className="text-base font-medium text8">{stockStatus}</span></span></p>
                                 </div>
 
-                                <div className="flex gap-5 mt-14">
+                                <div className="lg:flex md:flex gap-5 mt-14">
                                     <div>
                                         <Link to={`/Update/${_id}`}>
-                                            <button className="button4 w-[270px] font-semibold h-[50px] rounded-lg">Update</button>
+                                            <button className="button4 lg:w-[270px] w-[150px] md:w-[270px] font-semibold mb-4 lg:mb-0 md:mb-0 h-[50px] rounded-lg">Update</button>
                                         </Link>
 
                                     </div>
                                     <div>
-                                        <button onClick={() => handleDelete(_id)} className="button4 w-[270px] font-semibold h-[50px] rounded-lg">Delete</button>
+                                        <button onClick={() => handleDelete(_id)} className="button4 lg:w-[270px] w-[150px] md:w-[270px] font-semibold h-[50px] rounded-lg">Delete</button>
                                     </div>
                                 </div>
 

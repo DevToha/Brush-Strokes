@@ -10,7 +10,7 @@ const CraftItem = ({ item }) => {
         <div>
             <div className="card15 mb-10 bg-[#fff4e4] cursor-pointer">
                 <div className='imageBorder w-[] h-[345px] p-5 bg-white'>
-                    <img className='h-[245px] w-[340px] ' src={photoURL} alt="nature-pic-CSSnippets" />
+                    <img className='h-[245px] lg:w-[340px] md:w-[340px] w-[300px]' src={photoURL} alt="nature-pic-CSSnippets" />
                 </div>
                 <h1 className='mt-10'>{itemName}</h1>
                 <p className='text-3xl my-5 font-bold'>$ {price}</p>

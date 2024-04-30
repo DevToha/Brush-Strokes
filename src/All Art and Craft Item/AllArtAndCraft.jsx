@@ -63,7 +63,6 @@ const AllArtAndCraft = () => {
                                             </div>
                                             <div>
                                                 <div className="font-bold">{item.itemName}</div>
-                                                <div className="text-sm opacity-50">United States</div>
                                             </div>
                                         </div>
                                     </td>

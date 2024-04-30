@@ -8,9 +8,9 @@ const Footer = () => {
                 <footer className='md:pl-20'>
                     <footer className=" footer text-base-content md:mb-16">
                         <nav>
-                            <h6 className="text-4xl font-bold lg:ml-10 mt-[26px] text12">BRUSH STROKES</h6>
+                            <h6 className="text-4xl font-bold md:ml-0 ml-10 mt-[26px] text12">BRUSH STROKES</h6>
                         </nav>
-                        <nav className="lg:ml-24">
+                        <nav className="lg:ml-24 ml-7">
                             <h6 className="lg:text-4xl text-2xl ml-[85px] font-semibold mb-3 lg:ml-[64px]">Quick Links</h6>
                             <div className=" text-lg font-medium lg:mt-0 mt-8">
                                 <a className="">History</a>
@@ -19,7 +19,7 @@ const Footer = () => {
                                 <a className=" ml-5">Help Center</a>
                             </div>
                         </nav>
-                        <nav className="ml-[90px] lg:mt-0 mt-8 mb-8  lg:inline sm:inline md:hidden">
+                        <nav className="lg:ml-[90px] ml-[20px] lg:mt-0 mt-8 mb-8  lg:inline sm:inline md:hidden">
                             <h6 className="lg:text-xl font-medium">58 A, East Madison Street, Baltimore, MD, USA 4508</h6>
                             <div className="lg:ml-[235px] ml-[79px] lg:text-xl font-medium">
                                 <a className="">Mail: devtoha@gmail.com</a>
@@ -31,7 +31,7 @@ const Footer = () => {
 
                     </footer>
 
-                    <div className="lg:hidden sm:hidden md:inline md:ml-[200px]">
+                    <div className="lg:hidden hidden md:inline md:ml-[200px]">
                         <h6 className="text-2xl font-medium">58 A, East Madison Street, Baltimore, MD, USA 4508</h6>
                         <div className="md:ml-[322px] text-xl font-medium">
                             <a className="">Mail: devtoha@gmail.com</a>

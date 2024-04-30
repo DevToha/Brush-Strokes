@@ -65,7 +65,7 @@ const Update = () => {
 
                     <form onSubmit={handleUpdateItem}>
                         <div>
-                            <div className="flex gap-16">
+                            <div className="lg:flex md:flex gap-16">
                                 <div>
                                     <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" defaultValue={itemName} placeholder="Item Name" name="item_name" id="" required />
 
@@ -119,7 +119,7 @@ const Update = () => {
                                 </div>
 
                                 <br />
-                                <input className="cursor-pointer mt-10 lg:w-[1001px] md:w-[580px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="UPDATE NOW" />
+                                <input className="cursor-pointer ml-8 lg:ml-0 md:ml-0 mt-10 lg:w-[1001px] md:w-[580px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="UPDATE NOW" />
                             </div>
 
                         </div>
