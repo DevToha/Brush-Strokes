@@ -64,7 +64,7 @@ const Banner = () => {
 
     return (
         <div>
-            <div className="rounded-xl relative overflow-hidden color">
+            <div className="rounded-xl relative md:mt-10 overflow-hidden color">
                 <div className="w-[600px] h-[400px] relative">
                     {sliderContent.map((slide, i) => {
                         return (

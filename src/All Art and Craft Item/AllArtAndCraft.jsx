@@ -33,9 +33,9 @@ const AllArtAndCraft = () => {
 
     return (
         <div>
-            <h2 className="text-center font-bold text-4xl lg:mb-10 mb-5 mt-10">All Art And Craft item</h2>
+            <h2 className="text-center font-bold text-4xl mb-8 mt-10">All Art And Craft item</h2>
 
-            <div className="bg-[#fae8d3] mt-8 w-[1350px] ml-[88px] rounded-lg p-10 pl-28">
+            <div className="bg-[#fae8d3] mt-8 lg:w-[1350px] lg:ml-[88px] md:ml-0 rounded-lg lg:p-10 md:p-5 lg:pl-28">
 
 
                 <div className="overflow-x-auto">

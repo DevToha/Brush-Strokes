@@ -53,9 +53,9 @@ const AddCraft = () => {
 
     return (
         <div>
-            <div className="bg-[#fae8d3] shadow8 py-5 pl-[92px] ml-[160px] mt-10 rounded-3xl w-[1215px]">
+            <div className="bg-[#fae8d3] shadow8 py-5 pl-[92px] md:ml-0 lg:ml-[160px] mt-10 rounded-3xl lg:w-[1215px]">
 
-                <h3 className="text-3xl font-semibold ml-[355px]">Lets Add Some Product!</h3>
+                <h3 className="text-3xl font-semibold lg:ml-[355px] md:ml-[150px]">Lets Add Some Product!</h3>
 
 
                 <div className=" md:w-1/3 mt-10 mb-10">
@@ -64,23 +64,23 @@ const AddCraft = () => {
                         <div>
                             <div className="flex gap-16">
                                 <div>
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="Item Name" name="item_name" id="" required />
+                                    <input className="mb-10 lg:w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="Item Name" name="item_name" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Subcategory Name" name="subcategory_Name" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Subcategory Name" name="subcategory_Name" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Short Description" name="short_description" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Short Description" name="short_description" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Processing Time" name="processing_time" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Processing Time" name="processing_time" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="User Name" name="User_Name" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="name" placeholder="User Name" name="User_Name" id="" required />
 
                                     <br />
 
@@ -90,33 +90,33 @@ const AddCraft = () => {
                                 {/*  */}
 
                                 <div>
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Price" name="price" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Price" name="price" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Rating" name="rating" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Rating" name="rating" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="photoURL" placeholder="Image ( Use Image URL)" name="photoURL" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="photoURL" placeholder="Image ( Use Image URL)" name="photoURL" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Customization" name="customization" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Customization" name="customization" id="" required />
 
                                     <br />
 
-                                    <input className="mb-10 w-[470px] py-2 px-4 border-2 border-gray-300 rounded-md" type="email" placeholder="User Email" name="User_Email" id="" required />
+                                    <input className="mb-10 w-[470px] md:w-[260px] py-2 px-4 border-2 border-gray-300 rounded-md" type="email" placeholder="User Email" name="User_Email" id="" required />
                                 </div>
                             </div>
 
                             <div>
                                 <div className="relative">
-                                    <input className=" w-[1001px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Stock Status" name="stockStatus" id="" required />
+                                    <input className=" lg:w-[1001px] md:w-[580px] py-2 px-4 border-2 border-gray-300 rounded-md" type="text" placeholder="Stock Status" name="stockStatus" id="" required />
                                 </div>
 
                                 <br />
-                                <input className="cursor-pointer mt-10 w-[1001px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="ADD NOW" />
+                                <input className="cursor-pointer mt-10 w-[1001px] md:w-[580px] py-2 px-4 border-2 rounded-md border-gray-300 bg-blue-500 text-white text-lg font-medium" type="submit" value="ADD NOW" />
                             </div>
 
                         </div>

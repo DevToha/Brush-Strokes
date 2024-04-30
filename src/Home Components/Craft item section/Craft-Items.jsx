@@ -35,9 +35,9 @@ const CraftItems = () => {
 
     return (
         <div>
-            <h2 className="text-center font-bold text-4xl lg:mb-10 mb-5">Featured Estate</h2>
+            <h2 className="text-center font-bold text-4xl lg:mb-10 mt-8 mb-8">Featured Estate</h2>
 
-            <div className="lg:grid lg:grid-cols-3 lg:ml-[75px]">
+            <div className="lg:grid lg:grid-cols-3 lg:ml-[75px] md:ml-[160px]">
                 {
                     items.map(item => <CraftItem key={item.id} item={item}></CraftItem>)
                 }

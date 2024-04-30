@@ -7,7 +7,7 @@ const Review = () => {
         <div>
             <h1 className="text-4xl font-semibold mt-8 text-center mb-8">What Our People Saying</h1>
 
-            <div className='flex gap-16 ml-[50px] cursor-pointer'>
+            <div className='flex gap-16 lg:ml-[50px] cursor-pointer'>
                 <div className="card13 rounded-lg">
                     <div className="card13-img">
                         <div className='bg-[#fae8d3] w-[] h-[160px] pt-10 pl-10'>
