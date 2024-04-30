@@ -12,6 +12,8 @@ import CraftDetails from "../Home Components/Craft item details/CraftDetails";
 import ErrorPage from "../Error Page/ErrorPage";
 import MySingleArtAndCraft from "../Private/MySingleArtAndCraft";
 import Update from "../Private/Update";
+import ArtAndCraftCategories from "../Home Components/Art & Craft Categories Section/ArtAndCraftCategories";
+import ExtraSection2 from "../Home Components/Extra 1/ExtraSection2";
 
 
 const router = createBrowserRouter([
@@ -64,6 +66,14 @@ const router = createBrowserRouter([
         path: '/Update/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`)
+      },
+      {
+        path: '/ArtAndCraftCategories',
+        element: <ArtAndCraftCategories></ArtAndCraftCategories>
+      },
+      {
+        path: '/ExtraSection2',
+        element: <ExtraSection2></ExtraSection2>
       }
     ]
   },

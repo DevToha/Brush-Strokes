@@ -3,10 +3,10 @@ import './Banner.css'
 import { useRef } from 'react';
 import { useState } from 'react';
 
-import img1 from './Banner Image/1.jpg'
-import img2 from './Banner Image/2.jpg'
-import img3 from './Banner Image/3.jpg'
-import img4 from './Banner Image/4.jpg'
+import img1 from './Banner Image/8-bit-graphics-pixels-scene-with-forest.jpg'
+import img2 from './Banner Image/autism-day-awareness-collage-style-with-people.jpg'
+import img3 from './Banner Image/digital-art-beautiful-mountains.jpg'
+import img4 from './Banner Image/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai.jpg'
 
 const Banner = () => {
     const [active, setActive] = useState(0);
@@ -21,19 +21,19 @@ const Banner = () => {
     const sliderContent = [
         {
             img: img1,
-            name: "Wanda Maximoff",
+            name: "Forest Landscape painting",
         },
         {
             img: img2,
-            name: "The Hulk",
+            name: "Oil Painting",
         },
         {
             img: img3,
-            name: "Iron Man",
+            name: "Mountain view canvas",
         },
         {
             img: img4,
-            name: "Black Panther",
+            name: "Water Colour Painting",
         },
     ];
 
@@ -99,8 +99,7 @@ const Banner = () => {
                 <div className="content" ref={contentRef}>
                     <h1 ref={nameRef}>{sliderContent[0].name}</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
-                        porro.
+                        Painting is a form of visual art that involves applying pigment and color to a surface.
                     </p>
                 </div>
             </div>
