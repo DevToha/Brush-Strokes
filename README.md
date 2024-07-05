@@ -1,20 +1,28 @@
 ## Brush Strokes
 
-## live site URL: 
+## live site URL: assignment-10-7bf9f.web.app/
 
-## Bullet point Features
-- Bullet point 1 : Responsive design for mobile,Tablet and desktop devices.
-- Bullet point 2 : User-friendly interface with intuitive navigation.
-- Bullet point 3 : User-friendly interface with intuitive navigation.
-- Bullet point 4 : Secure authentication system for user accounts.
-- Bullet point 5 : User-friendly interface with intuitive navigation.
+## Features
+-  Responsive design for mobile,Tablet and desktop devices.
+-  User-friendly interface with intuitive navigation.
+-  User-friendly interface with intuitive navigation.
+-  Secure authentication system for user accounts.
+-  User-friendly interface with intuitive navigation.
 - 
-## Use npm package
+## Used package
 1. React-tooltip
 2. React Awesome reveal
-   
-## Selected category name :Painting and Drawing
-
+3. firebase
+3. localforage
+4. match-sorter
+5. primereact
+6. react
+7. react-dom
+8. react-icons
+9. react-router-dom
+10. sort-by
+11. sweetalert2
+12. swiper
 
 
 
