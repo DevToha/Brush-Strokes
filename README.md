@@ -1,6 +1,3 @@
-## Brush Strokes
-
-## live site URL: assignment-10-7bf9f.web.app/
 
 ## Features
 -  Responsive design for mobile,Tablet and desktop devices.
